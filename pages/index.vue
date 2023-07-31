@@ -3,24 +3,25 @@
 		<nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
 			<div class="flex flex-wrap justify-between items-center">
 				<div class="flex justify-start items-center">
-					<a href="https://flowbite.com" class="flex mr-4">
+					<NuxtLink to="/" class="flex mr-4">
 						<span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Yari's Blog</span>
-					</a>
+					</NuxtLink>
 				</div>
 				<div class="flex items-center lg:order-2">
 					<img class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
-						alt="user photo">
+						alt="Profile photo">
 				</div>
 			</div>
 		</nav>
 	</header>
 
-	<section class="bg-white dark:bg-gray-900 h-full">
-		<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+	<section class="bg-white dark:bg-gray-900 h-screen">
+		<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 h-screen">
 			<div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
-				<h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">My Posts</h2>
-				<p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">We use an agile approach to test assumptions and
-					connect with the needs of your audience early and often.</p>
+				<h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Hi I'm Yari</h2>
+				<p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+					Welcome to my conner of the internet, here I share with you the latest tech news, cool porjects and usefull content to help you start your own dream projects
+				</p>
 			</div>
 
 			<form action="#" method="GET" class="hidden lg:block mb-6">
@@ -51,11 +52,7 @@
 					<div class="flex justify-between items-center mb-5 text-gray-500">
 						<span
 							class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
-							<svg class="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z">
-								</path>
-							</svg>
+							<svg class="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd"></path><path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z"></path></svg>
 							Article
 						</span>
 						<span class="text-sm">{{ post.date.split("T")[0].split("-").reverse().join("/") }}</span>
@@ -105,7 +102,4 @@ const filteredPosts = computed((): Post[] | null | undefined => {
   }
   return posts.value?.filter(searchByTitle);
 });
-
-
-console.log(posts)
 </script>
